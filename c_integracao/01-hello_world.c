@@ -10,7 +10,7 @@ int main(int argc, const char* argv[]){
   luaL_dostring(L, "print('Ola Mundo')");
 
   // carrega o arquivo e executa as ações dele
-  luaL_dofile(L, "alguma_coisa.lua");
+  luaL_dofile(L, "01-hello.lua");
 
   lua_close(L);
   return 0;
