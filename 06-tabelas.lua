@@ -15,7 +15,7 @@ print("\n---- Tabelas como Dicionários ----")
 -- Tabelas em Lua podem ser dicionários
 a = {x=2, y=5}
 print(a.x)
-print(a[y])
+print(a["y"])
 
 print("\nIterando sobre dicionários")
 for k, v in pairs(a) do 

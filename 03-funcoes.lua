@@ -10,7 +10,7 @@ print(triplicar(2))
 -- Muitas linguagens de script não usam ";" como marcação de fim de expressão
 -- Em Lua, é permitido até deixar a expressão in-line
 function duplica(num) return 2*num end
-print(triplicar(2))
+print(duplica(2))
 
 -- Em Lua é uma linguagem multiparadigma e implementa recursos de funcional
 -- uma função é um valor qualquer, então posso associar a uma variável
@@ -24,6 +24,16 @@ function chama_duas_vezes(f, valor)
   return f(resultado)
 end
 print(chama_duas_vezes(mais_um, 10)) -- 12
+print(chama_duas_vezes(duplica, 10)) -- 20
+
+function retorna_funcao()
+  return function(a)
+    return a / 4
+  end
+end
+
+x = retorna_funcao()
+print(x(444))
 
 -- Flexibilidade nos argumentos
 function imprime_amigos(amigo1, amigo2)
